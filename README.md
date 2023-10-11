@@ -1,0 +1,2 @@
+# BeaverType
+Typing Test
