@@ -4,7 +4,7 @@
 
 void print_to_screen() {
     std::cout << "Try typing this." << std::endl;
-}
+} 
 
 std::string take_input() {
     std::string input;
