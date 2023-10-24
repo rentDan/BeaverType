@@ -5,6 +5,11 @@
 #include <algorithm>
 #include <random>
 
+/**
+* @brief Parses example file for words to use.
+*
+* @return Vector full of the examples in a random order
+*/
 std::vector<std::string> get_words() {
     std::vector<std::string> v;
     std::ifstream myfile ("examples.txt");
@@ -19,9 +24,13 @@ std::vector<std::string> get_words() {
     return v;
 }
 
-
+/**
+* @brief Prints the examples to the screen.
+*
+* @param vec Takes in a vector
+*/
 void print_to_screen(std::vector<std::string> vec ) {
-    for(int i=0; i<8; i++)
+    for(int i=0; i<vec.size(); i++)
         std::cout << vec[i] << " ";
     std::cout << std::endl;
 } 
