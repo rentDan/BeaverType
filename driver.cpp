@@ -9,6 +9,11 @@
 std::vector<std::string> words;
 std::string init_msg;
 
+/**
+* @brief Gets the examples from a file.
+*
+* @param Takes in the name of a file
+*/
 void getWords(const std::string& filename) {
     std::ifstream file(filename);
     if(!file.is_open()) {
@@ -22,6 +27,9 @@ void getWords(const std::string& filename) {
     file.close();
 }
 
+/**
+* @brief Randomizes the order of the examples.
+*/
 void genRand() {
     std::random_device rd;
     std::mt19937 g(rd());
@@ -44,6 +52,9 @@ int total;
 float percent;
 bool gameOver = false;
 
+/**
+* @brief Reads user input, tracks time, calculates accuracy.
+*/
 void readInput() {
   int i = 0;
   auto start_time = std::chrono::steady_clock::now();
